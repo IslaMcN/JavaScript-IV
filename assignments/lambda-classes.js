@@ -14,6 +14,7 @@ class Instructors extends Person{
     constructor(knowledge){
         super(knowledge);
         this.specialty = knowledge.specialty
+        this.score = knowledge.score
         
     }
     speak(){
@@ -51,8 +52,8 @@ class PM extends Instructors{
     }
 }
 
-const Isla = new Student({
-    beverage: coffee,
+const Isla = new Students({
+    beverage: "coffee",
     dimensions: {
       height: 5.2,
     },
@@ -61,4 +62,40 @@ const Isla = new Student({
     location: "California",
     language: "English",
     phrase: "Oh my God! Duh!"
+  });
+
+  const Arya = new Students({
+      beverage: "juice",
+      dimensions: {
+          height: 2.5,
+      },
+      grade: 50,
+      name: "Arya",
+      location: "California",
+      language: "Babble",
+      phrase: "Mmmmmmoooooommmmmmaaaaaa"
+  });
+
+  const Eric = new Students({
+      beverage: "g-fuel",
+      dimensions: {
+          height: 5.11,
+      },
+      grade: 100,
+      name: "Eric",
+      location: "California",
+      language: "Gibberish",
+      phrase: "hehee what now??",
+  });
+
+  const Zelda = new Students({
+      beverage: "puddles",
+      dimensions: {
+          weight: 65,
+      },
+      grade:78,
+      name: "Zelda",
+      location: "California",
+      language: "Whine",
+      phrase: "Sttttrrrrreeeeeeesssssssss",
   });
