@@ -12,34 +12,25 @@ class GameObject {
     this.createdAt = game.createdAt;
     this.name = game.name;
     this.dimensions = game.dimensions;
-  
-  }//constructor
+   }//constructor
   destroy () {
     return `${this.name} was removed from game.`;
-  
-}//method
-  
-}//GameObject 
-  // prototype method that returns: `${this.name} was removed from the game.`
+  }//method
+  }//GameObject 
   
   
   
-  class CharacterStats extends GameObject {
+   class CharacterStats extends GameObject {
     constructor(character){
         super(character);
     this.healthPoints = character.healthPoints;
-    
-  }//constructor
+    }//constructor
   takeDamage () {
     return `${this.name} took damage.`
   }//method
 }//CharacterStats
   
   
-  
-  // prototype method -> returns the string '<object name> took damage.'
-  // * should inherit destroy() from GameObject's prototype
-//   CharacterStats.prototype = Object.create(GameObject.prototype);
   
   
   
@@ -49,27 +40,16 @@ class GameObject {
     this.team = human.team;
     this.weapons = human.weapons;
     this.language = human.language;
-    
-  }//constructor
-//   Humanoid.prototype = Object.create(CharacterStats.prototype)
-  
+    }//constructor
+
   greet() {
     return `${this.name} offers a greeting in ${this.language}`
   }//method
-
 }//Humanoid
   
   
   
-  /*
-    * Inheritance chain: GameObject -> CharacterStats -> Humanoid
-    * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
-    * Instances of CharacterStats should have all of the same properties as GameObject.
-  */
-  
-  // Test you work by un-commenting these 3 objects and the list of console logs below:
-  
-  
+ 
   const mage = new Humanoid({
     createdAt: new Date(),
     dimensions: {

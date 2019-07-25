@@ -50,3 +50,15 @@ class PM extends Instructors{
         console.log(`I found ${this.resource} extremely helpful if you ever get stuck.`)
     }
 }
+
+const Isla = new Student({
+    beverage: coffee,
+    dimensions: {
+      height: 5.2,
+    },
+    grade: 25,
+    name: 'Isla',
+    location: "California",
+    language: "English",
+    phrase: "Oh my God! Duh!"
+  });
