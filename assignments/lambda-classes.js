@@ -3,7 +3,8 @@ class Person {
     constructor(attributes){
         this.name =attributes.name,
         this.location =attributes.name,
-        this.phrase = attributes.phrase
+        this.phrase = attributes.phrase,
+        this.grade = attributes.grade
 }
 speak(){
             console.log(`${this.name} says ${this.phrase}`)
@@ -14,20 +15,27 @@ class Instructors extends Person{
     constructor(knowledge){
         super(knowledge);
         this.specialty = knowledge.specialty
-        this.score = knowledge.score
+        
         
     }
     speak(){
         console.log(`Hi everybody! I'm ${this.name} and I'm going to teach you about ${this.specialty}.`)
     }
+    setScore(){
+        let random = (Math.floor((Math.random() * 2)+1)-1);
+        let plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+        random = random * plusOrMinus;
+        let currentnumber= this.grade;
+        this.grade = parseInt(currentnumber) + random;
 
+    }
 }
 
 class Students extends Person{
     constructor(noSleep){
         super(noSleep);
         this.beverage = noSleep.beverage,
-        this.grade = noSleep.grade
+        this.grade= noSleep.grade
     }
     redEyes(){
         console.log(`I am so exhuasted. I need to drink ${this.beverage} to stay awake.`)
@@ -99,3 +107,28 @@ const Isla = new Students({
       language: "Whine",
       phrase: "Sttttrrrrreeeeeeesssssssss",
   });
+
+  const Eli = new Instructors({
+      beverage: "tea",
+      name: "Eli",
+      location: "California",
+      phrase: "Oh nooooooo",
+  });
+
+  const Maegan = new PM({
+      beverage: "tea",
+      name:"Maegan",
+      location: "California",
+      phrase: "Hey girlie!",
+  })
+
+  console.log(Zelda.redEyes()); 
+  console.log(Eric.phrase); 
+  console.log(Arya.name); 
+  console.log(Isla.grade); 
+  console.log(Eli.setScore(Zelda)); // The Round Table
+//   console.log(mage.weapons); // Staff of Shamalama
+//   console.log(archer.language); // Elvish
+//   console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+//   console.log(mage.takeDamage()); // Bruce took damage.
+//   console.log(swordsman.destroy()); 
